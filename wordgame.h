@@ -3,8 +3,12 @@
 
 #include <QMainWindow>
 #include <vector>
-#include <stdlib>
-#include <time>
+#include <cstdlib>
+#include <ctime>
+//#include <QApplication>
+#include "winorloose.h"
+#include "helpdialog.h"
+//#include <QRegExp>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class WordGame; }
@@ -24,6 +28,7 @@ public:
      * @param TopicIndex Индекс темы
      */
     void setTopic(int TopicIndex);
+    void setTopic();
 
     /**
      * @brief Геттер для темы
@@ -35,13 +40,6 @@ public:
     /**
      * @brief Выбор рандомного слова, которое начинается на  из словаря `dictionary`
      * 
-     * @param character Последняя буква исходного слова
-     * @return QString Слово
-     */
-    QString getWordByLastCharacter(QChar character);
-    /**
-     * @brief Выбор рандомного слова, которое начинается на  из словаря `dictionary`
-     * 
      * @param word Исходное слово
      * @return QString Слово
      */
@@ -50,15 +48,29 @@ public:
     /**
      * @brief Геттер для рандомного слова из словаря
      * 
-     * @return QString 
+     * @return QString Рандомное слово
      */
-    QString getRandomWord();
+    void getRandomWord();
 
+    void TrimWords();
 
+    // UI
+    void getWordFromUserInput();
+    void setWordInPCInput();
+
+    // Slots
+    void PCMove();
+    void Select1topic();
+    void Select2topic();
+    void Select3topic();
+    void showHelp();
 
 
 private:
     Ui::WordGame *ui;
+
+    WinOrLoose *winDialog;
+    HelpDialog *help;
 
     /**
      * @brief Порядковый номер темы (начиная с 0). По умолчанию - 0.
@@ -76,7 +88,7 @@ private:
      * @brief Слово, которое ввёл пользователь
      * 
      */
-    QString userWord
+    QString userWord;
 
     /**
      * @brief Слово, которое выбрал компьютер

@@ -32,6 +32,12 @@ set(PROJECT_SOURCES
         wordgame.cpp
         wordgame.h
         wordgame.ui
+        winorloose.h
+        winorloose.cpp
+        winorloose.ui
+        helpdialog.cpp
+        helpdialog.h
+        helpdialog.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

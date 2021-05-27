@@ -32,84 +32,93 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
-        <item>
-         <widget class="QLabel" name="PCLabel">
-          <property name="text">
-           <string>Компьютер:</string>
-          </property>
-         </widget>
-        </item>
-        <item alignment="Qt::AlignRight">
-         <widget class="QLineEdit" name="PCLine">
-          <property name="text">
-           <string>Пиписька</string>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_4">
-        <item>
-         <widget class="QLabel" name="UserLabel">
-          <property name="text">
-           <string>Игрок:</string>
-          </property>
-         </widget>
-        </item>
-        <item alignment="Qt::AlignRight">
-         <widget class="QLineEdit" name="UserLine">
-          <property name="text">
-           <string>Ананас</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QPushButton" name="goButton">
-        <property name="text">
-         <string>Вперёд!</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="helpButton">
-        <property name="maximumSize">
-         <size>
-          <width>30</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>?</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <widget class="QWidget" name="MainWidget" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="PCLabel">
+             <property name="text">
+              <string>Компьютер:</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignRight">
+            <widget class="QLineEdit" name="PCLine">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="UserLabel">
+             <property name="text">
+              <string>Игрок:</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignRight">
+            <widget class="QLineEdit" name="UserLine">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string>Введите слово на последнюю букву</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="goButton">
+           <property name="text">
+            <string>Вперёд!</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="helpButton">
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>?</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>1</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -128,7 +137,7 @@
     </property>
     <addaction name="FoodTopic"/>
     <addaction name="AnimalsTopic"/>
-    <addaction name="ReligionTopic"/>
+    <addaction name="CityTopic"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
@@ -150,9 +159,9 @@
     <string>Животные</string>
    </property>
   </action>
-  <action name="ReligionTopic">
+  <action name="CityTopic">
    <property name="text">
-    <string>Религия</string>
+    <string>Города</string>
    </property>
   </action>
   <action name="HelpFunction">
