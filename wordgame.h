@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <vector>
+#include <stdlib>
+#include <time>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class WordGame; }
@@ -44,6 +46,13 @@ public:
      * @return QString Слово
      */
     QString getWordByLastCharacter(QString word);
+
+    /**
+     * @brief Геттер для рандомного слова из словаря
+     * 
+     * @return QString 
+     */
+    QString getRandomWord();
 
 
 
